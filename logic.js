@@ -34,53 +34,96 @@ const numInput13 = times.addEventListener('click', () =>  screenSelect.textConte
 const numInput14 = decimal.addEventListener('click', () =>  screenSelect.textContent += '.' );
 const screenContent = screenSelect;
 
-let resetScreen =  ac.addEventListener('click', () =>  screenSelect.innerHTML = '');
-
-
 let firstInput = 0;
-let secondInput = 0;
 let operator = '';
 
-let plusLogic = plus.addEventListener('click', () => {
-    const select = document.querySelector('.screen').innerHTML;
-    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '+'
-}); //this takes the first input and stores it in the firstInput variable once + has been selected
-let subtractLogic = division.addEventListener('click', () => {
-    const select = document.querySelector('.screen').innerHTML;
-    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '/'
-}); 
-let divideLogic = minus.addEventListener('click', () => {
-    const select = document.querySelector('.screen').innerHTML;
-    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '-'
-}); 
-let multiplyLogic = times.addEventListener('click', () => {
-    const select = document.querySelector('.screen').innerHTML;
-    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '*'
-}); 
-let secondInputReturn = equal.addEventListener('click', () => {
-    const screenSelector = document.querySelector('.screen').innerHTML;
-    return secondInput += parseFloat(screenSelector), screenSelect.innerHTML = ''
-}); // this takes the second input and assigns it to the secondInput variable when equals is pressed.
+function  test() {
+    screenSelect.textContent += firstInput
+};
 
-let displayOutput = equal.addEventListener('click', () => {
-    finalFiquire = 0;
-    if (operator === '+') {
-    return scoreAdd = finalFiquire += (firstInput + secondInput),
-    screenSelect.textContent += scoreAdd, firstInput = 0, secondInput = 0, operator = '';}
-    { if   
-    (operator === '-')
-    return  scoreSubtract = finalFiquire += (firstInput - secondInput),
-    screenSelect.textContent += scoreSubtract, firstInput = 0, secondInput = 0, operator = '';}
-    { if   
-    (operator === '/')
-    return  scoreDivide = finalFiquire += (firstInput / secondInput),
-    screenSelect.textContent += scoreDivide, firstInput = 0, secondInput = 0, operator = '';}
-    { if   
-    (operator === '*')
-    return  scoreDivide = finalFiquire += (firstInput * secondInput),
-    screenSelect.textContent += scoreDivide, firstInput = 0, secondInput = 0, operator = '';}
+let resetScreen =  ac.addEventListener('click', () =>   screenSelect.innerHTML = '', firstInput = 0);
+
+let mainLogic = {firstInput: 0,
+                secondInput: 0,
+                operator: ''  }
+
+let equalsOperator = equal.addEventListener('click', () => {
+    const screenSelector = document.querySelector('.screen').innerHTML;
+    if (operator == '+') {
+        return firstInput += parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = '' }
+    else if (operator =='*') {
+        return firstInput *= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '/') {
+        return firstInput /= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '-') {
+        return firstInput -= parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+});
+
+let timesOperator = times.addEventListener('click', () => {
+    const screenSelector = document.querySelector('.screen').innerHTML;
+    if (operator == '+') {
+        return firstInput += parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = '' }
+    else if (operator =='*') {
+        return firstInput *= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '/') {
+        return firstInput /= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '-') {
+        return firstInput -= parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+});
+let divideOperator = division.addEventListener('click', () => {
+    const screenSelector = document.querySelector('.screen').innerHTML;
+    if (operator == '+') {
+        return firstInput += parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = '' }
+    else if (operator =='*') {
+        return firstInput *= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '/') {
+        return firstInput /= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '-') {
+        return firstInput -= parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+});
+let subtractOperator = minus.addEventListener('click', () => {
+    const screenSelector = document.querySelector('.screen').innerHTML;
+    if (operator == '+') {
+        return firstInput += parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = '' }
+    else if (operator =='*') {
+        return firstInput *= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '/') {
+        return firstInput /= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '-') {
+        return firstInput -= parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+});
+let plusOperator = plus.addEventListener('click', () => {
+    const screenSelector = document.querySelector('.screen').innerHTML;
+    if (operator == '+') {
+        return firstInput += parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = '' }
+    else if (operator =='*') {
+        return firstInput *= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '/') {
+        return firstInput /= parseFloat(screenSelector), screenSelect.innerHTML = '',  screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
+    else if (operator == '-') {
+        return firstInput -= parseFloat(screenSelector), screenSelect.innerHTML = '', screenSelect.textContent += firstInput, firstInput = 0, operator = ''}
 });
 
 
 
-
+let firstInputLogic = plus.addEventListener('click', () => {
+    const select = document.querySelector('.screen').innerHTML;
+    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '+'
+});
+let divideLogic = division.addEventListener('click', () => {
+    const select = document.querySelector('.screen').innerHTML;
+    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '/'
+}); //this takes the first input and stores it in the firstInput variable once - has been selected
+let subtractLogic = minus.addEventListener('click', () => {
+    const select = document.querySelector('.screen').innerHTML;
+    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '-'
+}); //this takes the first input and stores it in the firstInput variable once / has been selected
+let multiplyLogic = times.addEventListener('click', () => {
+    const select = document.querySelector('.screen').innerHTML;
+    return firstInput += parseFloat(select), screenSelect.innerHTML = '', operator += '*'
+}); 
+/* step 1; Select first input number
+   step 2: select first operator 
+   step 3: select second input number
+   step 4: return total when an operator is clicked. 
+   step 5: select next */ 
