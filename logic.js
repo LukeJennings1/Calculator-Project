@@ -16,6 +16,8 @@ const times = document.querySelector('.multiply');
 const ac = document.querySelector('.AC');
 const equal = document.querySelector('.equal');
 const decimal = document.querySelector('.decimal');
+const del = document.querySelector('.del');
+
 
 
 const numInput1 = number1.addEventListener('click', () =>  screenSelect.textContent += '1');
@@ -134,4 +136,5 @@ function booleanSwitch() {
     number9.addEventListener('click', () =>  screenSelect.textContent = '9'),
     number0.addEventListener('click', () =>  screenSelect.textContent = '0');
 }
-let resetScreen2 =  ac.addEventListener('click', () =>   screenSelect.innerHTML = '', firstInput = 0, secondInput = 0);
+let resetScreen =  ac.addEventListener('click', () =>   screenSelect.innerHTML = '', firstInput = 0, secondInput = 0);
+let deleteScreen =  del.addEventListener('click', () =>   screenSelect.innerHTML = '', firstInput = 0, secondInput = 0);
