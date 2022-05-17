@@ -18,7 +18,7 @@
 .screen {
     overflow: scroll;
     border: solid;
-    border-color: rgb(212, 212, 212);
+    border-color: rgb(78, 70, 70);
     margin: auto;
     border-radius: 10px;
     padding-top: 5px;
@@ -30,7 +30,7 @@
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     align-items: center;
-    
+    background-color: rgb(238, 236, 236);
 }
 .calculator {
     display: grid;
@@ -38,7 +38,7 @@
     width: 225px;
     height: 235px;
     border: solid;
-    border-color: rgb(94, 85, 85);
+    border-color: rgb(78, 70, 70);
     border-top: 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
