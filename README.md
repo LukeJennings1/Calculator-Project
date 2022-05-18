@@ -1,6 +1,6 @@
 # Calculator-Project
 
-This is my web-based calculator app made using Javscript, HTML and CSS. 
+This is my web-based calculator app made using Javascript, HTML and CSS. 
 
 The app takes input from screenselectors that convert the screen div using parsefloat. It then takes these inputs and stores them in variables before summing the logic based on the operator chosen. 
 
