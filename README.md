@@ -10,5 +10,4 @@ Most challenging thing:
 
 The most challenging thing with this project was in connecting up the operators so that you can perform chained equations such as 12 + 7 - 5 * 3 = 42. This challenge was overcome by (along with lots of coffee and head scratching!) adding a boolean that signals when another operator has been chosen and then clears the screen when any number value has been picked so that, for example on the subtraction operator (12 + 7 -) the screen clears and allows the user to input another number. This allows the screenselector to select the newly added number without interference from previous inputs. 
 
-
-          ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/100855706/177363155-79c7a311-0f1b-4c11-848e-388386c50c0a.gif)
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/100855706/177363155-79c7a311-0f1b-4c11-848e-388386c50c0a.gif)
