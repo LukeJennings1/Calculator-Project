@@ -1,4 +1,4 @@
-# Calculator-Project
+# Calculator Project
 
 This is my web-based calculator app made using Javascript, HTML and CSS with flexbox. 
 
